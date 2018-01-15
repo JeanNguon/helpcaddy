@@ -1,0 +1,150 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#application {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    background: url('../images/app_background.png') left top no-repeat;
+}
+
+#application > * {
+    position: absolute;
+}
+
+#application header {
+    top: 60px;
+    left: 137px;
+    width: 87px;
+    height: 36px;
+    line-height: 18px;
+    color: rgb(195, 74, 88);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#app-icon {
+    width: 104px;
+    height: 104px;
+    left: 128px;
+    top: 118px;
+    background: url('../images/app_icon.png') left top no-repeat;
+    border-radius: 50%;
+}
+
+#counter-container {
+    width: 46px;
+    height: 46px;
+    top: 114px;
+    left: 196px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#counter-container > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#counter-container .counter-background {
+    background: url('../images/counter_background.png') left top no-repeat;
+}
+
+#counter-container .counter-frame {
+    background: url('../images/counter_alpha_frame.png') left top no-repeat;
+}
+
+#counter-container .counter-value {
+    left: -46px;
+    width: 138px;
+}
+
+#counter-container .counter-value.slide-left {
+    left: 0;
+}
+
+#counter-container .counter-value.slide-right {
+    left: -92px;
+}
+
+#counter-container .counter-value.animated {
+    -webkit-transition: left 0.5s linear;
+}
+
+#counter-container .counter-value > div {
+    text-align: center;
+    line-height: 46px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    float: left;
+    width: 46px;
+    height: 100%;
+    font-size: 19px;
+}
+
+#application .circle-button {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+#decrease-btn {
+    left: 51px;
+    top: 146px;
+    background: url('../images/normal_state_minus.png') left top no-repeat;
+}
+
+#decrease-btn:active {
+    background-image: url('../images/hover_state_minus.png');
+}
+
+#increase-btn {
+    left: 249px;
+    top: 146px;
+    background: url('../images/normal_state_plus.png') left top no-repeat;
+}
+
+#increase-btn:active {
+    background-image: url('../images/hover_state_plus.png');
+}
+
+#auto-increment-btn {
+    left: 92px;
+    top: 240px;
+    width: 177px;
+    height: 83px;
+    -webkit-transition: background-image 1s linear;
+    background: url('../images/toggle_off.png') left top no-repeat;
+    box-sizing: border-box;
+    padding: 32px 38px 19px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+#auto-increment-btn.btn-state-on {
+    background-image: url('../images/toggle_on.png');
+}
+
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url('../images/hover_state_minus.png') url('../images/hover_state_plus.png') url('../images/toggle_on.png');
+}
